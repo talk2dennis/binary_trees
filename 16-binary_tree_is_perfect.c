@@ -13,11 +13,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	if (tree->left == NULL && tree->right == NULL)
-		return (1);
 	r_height = binary_tree_height(tree->right);
 	l_height = binary_tree_height(tree->left);
-	printf("left: %d, right: %d\n", l_height, r_height);
 	return (r_height == l_height);
 }
 
